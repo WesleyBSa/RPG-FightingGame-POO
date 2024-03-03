@@ -1,5 +1,5 @@
 body {
-    background-color: #ffffff;
+    background-color: #0d0b1a;
 }
 
 .container-game {
@@ -53,7 +53,6 @@ body {
 }
 
 .name {
-    bottom: 320px;
     justify-content: space-between;
 }
 
@@ -70,9 +69,14 @@ body {
 }
 
 .log {
+    background-color: #7e7e7e60;
     border: 1px dotted #999;
     height: 200px;
     overflow-y: scroll;
+}
+
+span {
+    font-size: 30px;
 }
 
 .attackbutton:disabled {
@@ -80,4 +84,24 @@ body {
     opacity: 0.5;
 }
 
+
+.winner-message {
+    height: 30px;
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: winner-message 1s ease-out;
+}
+
+
+@keyframes winner-message {
+    0%, 50%, 100% {
+        background-color: transparent;
+    }
+    25%, 75% {
+        background: #0fe066;
+    }
+}
 

@@ -126,10 +126,12 @@ class Stage {
 
     checkVictory() {
         if (this.fighter1.life <= 0) {
-            this.log.addMessage(`${BigMonster.name} venceu!`);
+            this.log.addMessage(`${LittleMonster} venceu!`);
+            this.showWinnerMessage(this.fighter2.name);
             this.disableButtons();
         } else if (this.fighter2.life <= 0) {
-            this.log.addMessage(`${'Guerreiro'} venceu!`);
+            this.log.addMessage(`${'Guerreiro'} venceu`);
+            this.showWinnerMessage(this.fighter1.name);
             this.disableButtons();
         }
     }
@@ -138,6 +140,13 @@ class Stage {
         this.fighter1El.querySelector('.attackbutton').disabled = true;
         this.fighter2El.querySelector('.attackbutton').disabled = true;
     }
+    
+    showWinnerMessage(winnerName) {
+        const winnerMessage = document.querySelector('.winner-message');
+        winnerMessage.textContent = `${winnerName} Wins!!!`;
+        winnerMessage.style.display = 'block';
+    }
+    
 }
 
 class Log {
@@ -156,7 +165,8 @@ class Log {
         this.listEl.innerHTML = '';
 
         for (let i in this.list) {
-            this.listEl.innerHTML += `<li>${this.list[i]}</li>`;
+            this.listEl.innerHTML += `<li><span>🗡</span>${this.list[i]}</li>`;
         }
     }
+
 }
