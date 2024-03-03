@@ -1,0 +1,83 @@
+body {
+    background-color: #ffffff;
+}
+
+.container-game {
+    padding: 15px;
+    background-color: #fdfdfd;
+    margin: auto;
+}
+
+.fightarea {
+    display: flex;
+    gap: 20px;
+}
+
+.fighter-container {
+    position: relative;
+}
+
+.fighter-container img {
+    height: 280px;
+    width: 290px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.fighter-container.attack-animation {
+    animation: attackBlink 0.6s ease-out;
+}
+
+@keyframes attackBlink {
+    0%, 50%, 100% {
+        background-color: transparent;
+    }
+    25%, 75% {
+        background: linear-gradient(#ff8801, #ff5100, #ff3c00);
+    }
+}
+
+
+#char, #monster {
+    flex: 1;
+}
+
+.name,
+.attackbutton {
+    position:relative;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.name {
+    bottom: 320px;
+    justify-content: space-between;
+}
+
+.lifebar {
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.lifebar .bar {
+    height: inherit;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.log {
+    border: 1px dotted #999;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.attackbutton:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
