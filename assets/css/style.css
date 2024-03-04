@@ -1,5 +1,5 @@
 body {
-    background-color: #0d0b1a;
+    background-color: #e0e0e07e;
 }
 
 .container-game {
@@ -52,6 +52,16 @@ body {
     margin: auto;
 }
 
+.attackbutton:hover {
+    position:relative;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    background-color: #0fe0ce;
+    border-color: #042eb8;
+    border-radius: 4px;
+}
+
 .name {
     justify-content: space-between;
 }
@@ -77,6 +87,9 @@ body {
 
 span {
     font-size: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 0, 0.322);
+    margin-right: 5px;
 }
 
 .attackbutton:disabled {
@@ -95,6 +108,14 @@ span {
     animation: winner-message 1s ease-out;
 }
 
+.character-image {
+    position: relative;
+}
+
+.character-image.dead {
+    opacity: 0.5; /* ou o valor desejado para a opacidade */
+    transition: opacity 0.5s ease; /* adicione uma transição suave para a opacidade */
+}
 
 @keyframes winner-message {
     0%, 50%, 100% {
