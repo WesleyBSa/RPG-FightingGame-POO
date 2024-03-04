@@ -36,6 +36,10 @@ function restartGame() {
     // Remove a classe 'dead' da imagem do personagem e do monstro
     document.querySelector('#char .character-image').classList.remove('dead');
     document.querySelector('#monster .character-image').classList.remove('dead');
+
+    //Limpa o log após o reinicio
+    log.list = [];
+    log.render();
 }
 
 stage.start();

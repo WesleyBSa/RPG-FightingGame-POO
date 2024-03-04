@@ -57,8 +57,8 @@ body {
     display: flex;
     justify-content: space-around;
     margin: auto;
-    background-color: #0fe0ce;
-    border-color: #042eb8;
+    background-color: #88ffac;
+    border-color: #04b840;
     border-radius: 4px;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .log {
-    background-color: #7e7e7e60;
+    background-color: #b8ffa760;
     border: 1px dotted #999;
     height: 200px;
     overflow-y: scroll;
@@ -88,7 +88,7 @@ body {
 span {
     font-size: 30px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 0, 0.322);
+    background-color: rgba(255, 115, 0, 0.685);
     margin-right: 5px;
 }
 
