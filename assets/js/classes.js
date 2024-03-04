@@ -138,7 +138,7 @@ class Stage {
 
     checkVictory() {
         if (this.fighter1.life <= 0) {
-            this.log.addMessage(`Você perdeu!`);
+            this.log.addMessage(`${BigMonster.name} venceu!`);
             this.showWinnerMessage(this.fighter2.name);
             this.disableButtons();
             this.enableRestartButton();
@@ -146,7 +146,7 @@ class Stage {
             // Adiciona a classe 'dead' à imagem do personagem
             this.fighter1El.querySelector('.character-image').classList.add('dead');
         } else if (this.fighter2.life <= 0) {
-            this.log.addMessage(`Você venceu!`);
+            this.log.addMessage(`${'Guerreiro'} venceu!`);
             this.showWinnerMessage(this.fighter1.name);
             this.disableButtons();
             this.enableRestartButton();
